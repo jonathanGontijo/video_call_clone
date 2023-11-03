@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:video_call/resources/auth_methods.dart';
 import 'package:video_call/screens/history_meeting_screen.dart';
 import 'package:video_call/screens/meeting_screen.dart';
 import 'package:video_call/utils/colors.dart';
+import 'package:video_call/widgets/custom_button.dart';
 import 'package:video_call/widgets/home_meeting_button.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,10 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   List<Widget> pages = [
-   const MeetingScreen(),
+   MeetingScreen(),
    const HistoryMeetingScreen(),
    const Text('Contacts'),
-   const Text('settings')
+   CustomButton(text: 'Log Out', onPressed: ()=> AuthMethods().signOut()),
   ];
 
 
