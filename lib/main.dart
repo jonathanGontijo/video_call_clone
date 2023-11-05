@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:video_call/resources/auth_methods.dart';
+import 'package:video_call/screens/contact_screen.dart';
 import 'package:video_call/screens/home_screen.dart';
 import 'package:video_call/screens/login_screen.dart';
 import 'package:video_call/screens/video_call_screen.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginScreen(),
         '/home': (context) => const HomeScreen(),
         '/video-call': (context) => const VideoCallScreen(),
+        '/contact': (context) => const ContactScreen(),
       },
       home: StreamBuilder(
         stream: AuthMethods().authChanges,

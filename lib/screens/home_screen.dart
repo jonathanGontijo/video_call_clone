@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_call/resources/auth_methods.dart';
+import 'package:video_call/screens/contact_screen.dart';
 import 'package:video_call/screens/history_meeting_screen.dart';
 import 'package:video_call/screens/meeting_screen.dart';
 import 'package:video_call/utils/colors.dart';
@@ -24,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> pages = [
    MeetingScreen(),
    const HistoryMeetingScreen(),
-   const Text('Contacts'),
+   const ContactScreen(),
    CustomButton(text: 'Log Out', onPressed: ()=> AuthMethods().signOut()),
   ];
 

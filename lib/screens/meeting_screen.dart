@@ -8,7 +8,7 @@ class MeetingScreen extends StatelessWidget {
   MeetingScreen({super.key});
 
   final JitsiMeetMethods _jitsiMeetMethods = JitsiMeetMethods();
-  
+
   createNewMeeting() async {
     var random = Random();
     String roomName = (random.nextInt(10000000) + 10000000).toString();
@@ -39,7 +39,7 @@ class MeetingScreen extends StatelessWidget {
             ),
             HomeMeetingButton(
               onPressed: () {},
-              text: 'Schedule ',
+              text: 'Schedule',
               icon: Icons.calendar_today,
             ),
             HomeMeetingButton(
@@ -52,14 +52,14 @@ class MeetingScreen extends StatelessWidget {
         const Expanded(
           child: Center(
             child: Text(
-              'Create/Join Meetins with just a click!',
+              'Create/Join Meetings with just a click!',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }
